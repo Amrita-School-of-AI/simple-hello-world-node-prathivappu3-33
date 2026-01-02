@@ -16,19 +16,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Setup ROS 2 Humble Environment
+    # 2. Setup ROS 2 Humble Environment
       - name: Setup ROS 2
         uses: ros-tooling/setup-ros@v0.7
         with:
           required-ros-distributions: humble
 
-      # After setting up ROS 2, before running the grader:
-      - name: Build ROS 2 Workspace
+    # 3. Build Workspace
+      - name: Build Workspace
         run: |
-        source /opt/ros/humble/setup.bash
-        colcon build
+          source /opt/ros/humble/setup.bash
+          colcon build --packages-select ros2_hello_world
+        shell: bash
 
-      # 3. Run the Grader
+    # 4. Run the Grader
       # This runs our script. If it exits 0, student gets 100 points.
       # If it exits 1, student gets 0 points.
       - name: ROS2 Node Test
