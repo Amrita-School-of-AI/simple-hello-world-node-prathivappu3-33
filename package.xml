@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
+<<<<<<< HEAD
   <name>ros2_hello_world</name>
   <version>0.0.0</version>
   <description>Assignment: Basic Hello World Node</description>
@@ -9,6 +10,18 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+=======
+  <name>my_hello_package</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="prathiv@todo.todo">prathiv</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+
+>>>>>>> c718dbe (Complete ROS2 Hello World assignment)
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
